@@ -38,12 +38,14 @@ describe('CommentBox', () => {
   
     it('shows that text is in the textarea', () => {
       // const component = renderComponent(CommentBox);
-      expect(component.find('button')).to.exist;
+      expect(component.find('textarea')).to.have.value('new comment');
     });
   
     it('when submitted clears the input', () => {
       // const component = renderComponent(CommentBox);
-      expect(component.find('button')).to.exist;
+      // console.log(component);   // you will see the form is our component.
+      component.simulate('submit');
+      expect(component.find('textarea')).to.have.value('');
     });
   
   })

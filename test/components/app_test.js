@@ -26,4 +26,9 @@ describe('App (this string is for documentation)' , () => {
     expect(component.find('.comment-box')).to.exist;
   });
 
+  it('shows a comment list', () => {    
+    expect(component.find('.comment-list')).to.exist;
+  });
+
+
 });
